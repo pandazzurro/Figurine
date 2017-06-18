@@ -1,0 +1,16 @@
+<md-sidenav-container>
+  <md-sidenav #sidenav class="header">
+   <md-list>
+     <cg-menu-list></cg-menu-list>
+   </md-list>
+  </md-sidenav>
+
+  <md-toolbar color="primary" class="mat-elevation-z4">
+    <i (click)="sidenav.open()" class="material-icons">menu</i>
+    <span class="spacer"></span>
+    <i class="material-icons">favorite</i>
+  </md-toolbar>
+  
+  <router-outlet></router-outlet>
+</md-sidenav-container>
+
