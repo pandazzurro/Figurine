@@ -1,3 +1,4 @@
+import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
@@ -12,7 +13,7 @@ import { MenuListComponent } from '../menu-list/menu-list.component';
 import { MenuComponent } from '../menu/menu.component';
 
 @NgModule({
-    imports: [CardMaterialModule, CardsRouterModule, HttpModule],
+    imports: [BrowserModule, CardMaterialModule, CardsRouterModule, HttpModule],
     exports: [CardMoneyComponent, HomeComponent, PlayerComponent, MenuComponent, MenuListComponent],
     declarations: [CardMoneyComponent, HomeComponent, PlayerComponent, MenuComponent, MenuListComponent],
     providers: [],
