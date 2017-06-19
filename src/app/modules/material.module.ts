@@ -1,12 +1,12 @@
 import { NgModule, ModuleWithProviders  } from '@angular/core';
 import { MdListModule, MdSidenavModule, MdToolbarModule, MdButtonModule, MdIconModule,
-    MdButtonToggleModule, MdCardModule, MdChipsModule, MdGridListModule,
+    MdButtonToggleModule, MdCardModule, MdChipsModule, MdGridListModule, MdTooltipModule,
     MdIconRegistry
   } from '@angular/material';
 import 'hammerjs';
 
 const MaterialModules = [MdListModule, MdSidenavModule, MdToolbarModule, MdButtonModule,
-        MdButtonToggleModule, MdCardModule, MdChipsModule, MdGridListModule, MdIconModule];
+        MdButtonToggleModule, MdCardModule, MdChipsModule, MdGridListModule, MdIconModule, MdTooltipModule];
 
 @NgModule({
     imports: [...MaterialModules],

@@ -1,0 +1,30 @@
+<md-card class="card mat-elevation-z6">
+   <md-card-header>     
+    <div md-card-avatar [ngClass]="getClassPersonType(Person.PersonType)"></div>
+    <md-card-title>{{Person.Name}} {{Person.Surname}}</md-card-title>
+    <md-card-subtitle>{{Person.ActualTeam}}</md-card-subtitle>       
+  </md-card-header>
+  <img md-card-image src="{{Person.ImageUrl}}" [style]="{'background-size':cover}">
+  <md-card-content>
+    <md-grid-list cols="2" rowHeight="40">
+       <md-grid-tile [colspan]="1">
+        <img md-card-avatar src="{{Person.Nation.FlagUrl}}" mdTooltip="{{Person.Nation.Name}}" mdTooltipPosition="right">
+      </md-grid-tile>
+      <md-grid-tile [colspan]="1">
+        <img md-card-avatar src="{{Person.League.FlagUrl}}" mdTooltip="{{Person.League.Name}}" mdTooltipPosition="left">
+      </md-grid-tile>
+    </md-grid-list>
+     <md-grid-list cols="2" rowHeight="20">
+      <md-grid-tile [colspan]="1">
+        <small>Birth: <b>{{Person.BirthDate | date : 'dd/MM/yyyy'}}</b></small>
+      </md-grid-tile>
+       <md-grid-tile [colspan]="1">
+        <small>Age: <b>{{Person.getAge()}}</b></small>
+      </md-grid-tile>
+    </md-grid-list>   
+  </md-card-content>
+   <md-card-actions *ngIf="History.observers.length > 0 || Market.observers.length > 0">
+    <button md-button (click)="History.emit(Person)" *ngIf="History.observers.length > 0">History</button>
+    <button md-button (click)="Market.emit(Person)" *ngIf="Market.observers.length > 0">Market</button>
+  </md-card-actions>  
+</md-card>
