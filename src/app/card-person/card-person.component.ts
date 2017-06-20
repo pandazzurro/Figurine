@@ -1,4 +1,5 @@
 import { Component, OnInit, Input, EventEmitter, Output } from '@angular/core';
+import { DomSanitizer } from '@angular/platform-browser';
 
 @Component({
   selector: 'cg-card-person',
@@ -9,11 +10,11 @@ export class CardPersonComponent implements OnInit {
   @Input() Person: Person;
   @Output() History: EventEmitter<Person> = new EventEmitter<Person>();
   @Output() Market: EventEmitter<Person> = new EventEmitter<Person>();
-  constructor() { }
+  constructor(public sanitizer: DomSanitizer) { }
 
   ngOnInit() {
-    const a = this.Person;
   }
+
   getClassPersonType(value?: PersonType) {
     let result = null;
     result = result === null && value === PersonType.Coach ? 'coach' : null;

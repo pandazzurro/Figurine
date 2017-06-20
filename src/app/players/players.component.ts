@@ -16,7 +16,7 @@ export class PlayersComponent implements OnInit {
     this.Person.BirthDate = new Date(1990, 8, 12);
     this.Person.ImageUrl = './assets/player/Balotelli.jpg';
     this.Person.League = { Name: 'League 1', FlagUrl : './assets/flag/Teams/Ligue1.png' };
-    this.Person.Nation = { Name: 'Italia', FlagUrl : './assets/flag/Nations/Italia.svg', ShortName: 'ITA' };
+    this.Person.Nation = { Name: 'Italia', FlagUrl : './assets/flag/Nations/italia.png', ShortName: 'ITA' };
     this.Person.Name = 'Mario';
     this.Person.NickName = 'Super Mario';
     this.Person.PersonType = PersonType.Soccer;
